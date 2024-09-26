@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my first website</title>
+    <meta name="my first website" content="This is my first website.">
+    <link rel="stylesheet" href="styleSheet2.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>
+
+    <main class="barBox">
+       
+        <img src="menu-regular-24.png" alt="menu icon" class="icon" id="menuButton"> 
+
+        <div class="goColum">
+            <a href="secondSection.html"> <img src="home-alt-2-regular-48.png" alt="home icon" class="icon">  </a> 
+            <p class="sideBarElement">home</p>    
+        </div>
+
+        <div class="goColum">
+            <div class="hoverBox"><p>click me</p></div> 
+            <p class="sideBarElement">random box</p>    
+        </div>
+              
+    </main>
+    <main class="invisbarBox">
+        <h1>this is the text in the main part of this website</h1>
+    </main>
+      
+    <script>    
+        let menuOpen = true;
+        const elements = document.querySelectorAll(`.${"sideBarElement"}`);
+        let menuButton = document.getElementById("menuButton");
+
+        menuButton.addEventListener("click", async function() {
+           
+            if(menuOpen == false)
+            {
+                elements.forEach(element => {
+                    element.classList.remove("sideBarElementNonvisible");
+                });
+            }else{
+                elements.forEach(element => {
+                    element.classList.add("sideBarElementNonvisible");
+                });
+            }                           
+            menuOpen = !menuOpen; // Toggle the menuOpen state
+        
+        });
+    </script>
+</body>     
+</html>
+
