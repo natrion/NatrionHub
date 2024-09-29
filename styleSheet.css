@@ -18,13 +18,23 @@ a{
     padding: 10px;
     height: fit-content;
     width: fit-content;
-    border-radius: 5px;
+    border-radius: 10px;
     border-color: black;
     border-width:2px ;
     background-color: rgb(90, 90, 90);
     display: flex;
     justify-content:space-around;
 
+}
+.mainText{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    order: 2;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    padding: 5px;
+    font-weight:bolder;
 }
 .box{
     background-color: rgb(30, 30, 30);
@@ -50,17 +60,26 @@ a{
     border-style: solid;
     margin: 10px;
 }
-
+.downBarPar{
+    margin-top: 40px;
+    width: 100%;
+    height:100%;
+    order: 3;
+    display: flex;
+    
+}
 .downBar{
+ 
+    flex-grow: 1;
     align-items: space-around;
     justify-content: space-around;
-    margin-top: 40px;
-    order: 2;
+    
+    
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     width:100%;
-    height: 100vh;
+    height: 100%;
 }
 .downBarImageBar{
     height:  fit-content;
@@ -71,7 +90,7 @@ a{
     justify-content: left;
     background-color: rgb(103, 103, 103);
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 .downBarImageBar:hover{
     border-color: rgb(187, 187, 187);
@@ -110,4 +129,26 @@ a{
     width:120px;
     height:120px;
 }
+.goTo{
+    width: 50px;
+    height: 20px;
+    min-height: 20px;
+    min-width: 50px;
+    background-color: grey;
+    white-space: nowrap; /* Prevents text from wrapping onto multiple lines */
+    overflow: hidden;    /* Ensures content doesn't overflow the container */
+    text-overflow: ellipsis; /* Optional: Adds "..." if the text overflows */
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    color: black;
+    border-radius: 10px;
+} 
+.goTo:hover{
+    border-color: rgb(187, 187, 187);
+    border-radius: 10px;
+    border-style: solid;
+}
+
 
