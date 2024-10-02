@@ -84,8 +84,9 @@ a{
     border-radius: 10px;
 }
 .downBarImageBar{
-    height:  fit-content;
-    width: fit-content;
+    width:  fit-content; 
+    height:140px;
+    
     margin: 10px ;
     display: flex;
     flex-direction: row;
@@ -93,32 +94,30 @@ a{
     background-color: rgb(90, 90, 90);
     padding: 10px;
     border-radius: 10px;
+    
+    overflow: hidden;
 }
 .downBarImageBar:hover{
     border-color: rgb(187, 187, 187);
     border-radius: 10px;
     border-style: solid;
+    height: fit-content !important;
 }
 .downBarBarText{
     color: black;
     font-size: 20px;
     display: block;
 }
-/*.downBarImageBar:hover > .downBarBarText{
-    display: block !important;  
-}*/
+.downBarImageBar:hover > .downBarBarText{
+    color: white;
+}
 .downBarImage{
     height: 120px; /* Set this to the desired height */
     width: auto;   /* The width will adjust to maintain the aspect ratio */
     object-fit: contain; /* Optional: Ensures the entire image fits within the given space */
     margin: 10px;
 }
-.downBarSubImage{
-    height: 120px; /* Set this to the desired height */
-    width: auto;   /* The width will adjust to maintain the aspect ratio */
-    object-fit: contain; /* Optional: Ensures the entire image fits within the given space */
-    margin: 10px;
-}
+
 .downBarImageBarHeader{
     font-size: 20px;
     margin-top: 10px;
@@ -151,6 +150,7 @@ a{
     border-color: rgb(187, 187, 187);
     border-radius: 10px;
     border-style: solid;
+    color: white;
 }
 .hide{
     display: none !important ;
