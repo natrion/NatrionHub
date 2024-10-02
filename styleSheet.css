@@ -102,11 +102,11 @@ a{
 .downBarBarText{
     color: black;
     font-size: 20px;
-    display: none;
+    display: block;
 }
-.downBarImageBar:hover > .downBarBarText{
+/*.downBarImageBar:hover > .downBarBarText{
     display: block !important;  
-}
+}*/
 .downBarImage{
     height: 120px; /* Set this to the desired height */
     width: auto;   /* The width will adjust to maintain the aspect ratio */
@@ -161,6 +161,7 @@ a{
     height:100%;
     order: 3;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
