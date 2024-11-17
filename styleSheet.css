@@ -1,29 +1,28 @@
-body{
-    overflow:hidden;
+body {
+    display: flex;
+    justify-content: center; /* Horizontally centers content */
+    align-items: center;     /* Optional: vertically centers content */
+    flex-direction: column;  /* Keeps content in a column layout */
     background-color: grey;
-    display:flex;
-    align-items:center;
-    flex-direction:column;
-    flex-wrap: nowrap;
+    text-align: center;      /* Keeps inline content, like text, centered */
+
     overflow-y: scroll;
-    
+    overflow-x: hidden;
 }
 a{
     text-decoration:none;
     outline: none;
 }
 .upBar{
-    order: 1;
     margin-top: -15px;
     padding: 10px;
-    height: fit-content;
+    height: min-content;
     width: fit-content;
     border-radius: 10px;
     border-color: black;
     border-width:2px ;
     background-color: rgb(90, 90, 90);
-    display: flex;
-    justify-content:space-around;
+    
 
 }
 .mainText{
@@ -36,16 +35,22 @@ a{
     padding: 5px;
     font-weight:bolder;
 }
+.downBarPart{
+    
+}
 .box{
     background-color: rgb(30, 30, 30);
     width: 100px;
     height: 100px;
 }
 .upBarImage{
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
     margin-left: 10px;
     margin-right: 10px ;
+}
+.upBar:has(.upBarImage:hover) {
+    margin-bottom: -20px; 
 }
 .upBarImage:hover{
     border-color: rgb(187, 187, 187);
@@ -54,26 +59,17 @@ a{
     margin: 10px;
 }
 
-.upBarImage:hover{
-    border-color: rgb(187, 187, 187);
-    border-radius: 10px;
-    border-style: solid;
-    margin: 10px;
-}
 .downBarPar{
     margin-top: 40px;
-    width: 100%;
-    height:100%;
     order: 3;
     display: flex;
     
 }
 .downBar{
- 
+    
     margin: 10px;
     flex-grow: 1;
-    align-items: space-around;
-    justify-content: space-around;
+    justify-content: flex-start;
     
     background-color: rgb(109, 109, 109);
     display: flex;
@@ -98,6 +94,7 @@ a{
     overflow: hidden;
 }
 .downBarImageBar:hover{
+    
     border-color: rgb(187, 187, 187);
     border-radius: 10px;
     border-style: solid;
@@ -110,6 +107,9 @@ a{
 }
 .downBarImageBar:hover > .downBarBarText{
     color: white;
+}
+.downBarImageBar:hover > .downBarImage{
+    display: none !important ;
 }
 .downBarImage{
     height: 120px; /* Set this to the desired height */
