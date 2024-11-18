@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>   
+    <title>NatrionHub</title>
+    <meta name="description" content="NationHub is your gateway to my free indie games and personal journey in game development, programming , and more... Explore interesting creations and ideas!">
+    <meta name="keywords" content="game development, Arduino, automation, 3D printing, NatrionHub">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natrion-Hub</title>
-    <meta name="Natrion-Hub" content="Natrions hub where you can find natrions free games and other projects.">
+    <meta property="og:title" content="NatrionHub: My indie Projects in Automation">
+    <meta property="og:description" content="Discover my projects in game development, hardware, and more.">
+    <meta property="og:image" content="https://natrionhub.com/img/priewiew_image.png">
+    <meta property="og:url" content="https://natrionhub.com/">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://natrionhub.com/">
+    <meta name="author" content="Matúš Frenci">
+    <meta name="language" content="en">
+    <link rel="icon" type="image/png" href="img/priewiew_image.png">
+
     <link rel="stylesheet" href="styleSheet.css">
 </head>
 <body>
@@ -28,6 +39,7 @@
         
   </main  >
    
+   <h1 id="about_Header">Explore My Projects and Creations</h1>
    <main class="downBarPar"id="downBar1">
         <main class="downBar">
             
@@ -180,6 +192,19 @@
         
         
    </main>
+   <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "NatrionHub",
+      "url": "https://natrionhub.com",
+      "description": "Explore game development, hardware projects, and more.",
+      "author": {
+        "@type": "Person",
+        "name": "Matúš Frenci"
+      }
+    }
+    </script>
    <script>
        
         function changeBars(witchBar)
@@ -189,6 +214,15 @@
                 bars[i].classList.add("hide");
             }
             bars[witchBar].classList.remove("hide");
+
+            if(witchBar == 0)
+            {
+                document.getElementById("about_Header").innerHTML  ="Explore My Projects and Creations";
+            }
+            if(witchBar == 1)
+            {
+                document.getElementById("about_Header").innerHTML  ="What You Need to Know About NatrionHub";
+            }
             
         }
         
